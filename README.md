@@ -67,9 +67,8 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 <h2>Materials and Methods 材料與方法</h2>
 
 [Environment]
-* Hyper-V virtualization platform (虛擬化平台)</b>
-* Kali Linux (attacker machine)</b>
-* Metasploitable vulnerable VM (target system)</b>
+* Windows 10 (VM)</b>
+
 
 
 [Tasks]
