@@ -45,16 +45,16 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 <div align="center">
 </p>
 
-| Category 分類                            | Tools / Concepts 工具與概念                                |
-| ---------------------------------------- | --------------------------------------------------------- |
-| Password Attacks <br/>密碼攻擊            | Dictionary Attack                                        |
-| Password Cracking <br/>密碼破解           | Hydra                                                    |
-| Network Scanning <br/>網路掃描            | Nmap                                                     |
-| Authentication Protocols <br/>認證協定    | SSH, FTP                                                 |
-| Wordlist Management <br/>字典管理         | Custom username/password lists <br/>自訂單字列表          |
-| Credential Discovery <br/>憑證發現        | Username & password enumeration <br/>使用者名稱和密碼枚舉  |
-| Remote Access 遠端存取                    | SSH login <br/>SSH登入                                   |
-| Penetration Testing <br/>滲透測試         | Authentication attack simulation <br/>身份驗證攻擊模擬     |
+| Category 分類                  | Tools / Concepts 工具 / 概念                                 |
+| ---------------------------- | -------------------------------------------------------- |
+| Malware Simulation <br/>惡意程式模擬    | eLiTeWrap EXE wrapper                                    |
+| Execution Control  <br/>執行控制        | Visible vs hidden execution, synchronous vs asynchronous <br/>可見執行與隱藏執行，同步執行與非同步執行 |
+| Windows Internals Windows <br/>系統    | Process execution, background processes <br/>進程執行、後台程式                                       |
+| System Monitoring <br/>系統監控        | Task Manager process analysis <br/>工作管理員流程分析                                                 |
+| File Packaging <br/>檔案封裝           | Executable bundling, payload execution <br/>可執行檔案捆綁、有效載荷執行                               |
+| Security Evasion <br/>檢測繞過         | Antivirus exclusion configuration <br/>防毒軟體排除配置                                               |
+| Attack Concept <br/>攻擊概念           | Trojan behavior simulation <br/>木馬行為模擬                                                         |
+
 
 </div>
 <br/>
