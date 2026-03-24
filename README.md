@@ -72,15 +72,15 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 
 
 [Tasks]
-* Explore Available Wordlists in Kali Linux (探索 Kali Linux 內建字典檔)</b>
-* Create a Custom Password Wordlist (建立自訂密碼字典檔)</b>
-* Create a Custom Username Wordlist (建立自訂使用者名稱字典檔)</b>
-* Identify Target Services with Nmap (使用 Nmap 掃描目標主機服務)</b>
-* Perform Dictionary Attack Using Hydra (使用 Hydra 進行字典攻擊)</b>
-* Alternative Attack via FTP (改透過 FTP 攻擊)</b>
-* Discover Valid Credentials (取得有效登入憑證)</b>
-* Access the Target System via SSH (透過 SSH 登入目標系統)</b>
-* Verify System Access and Close Session (驗證系統存取並結束連線)</b>
+* Set Up Lab Environment (建立實驗環境)</b>
+* Download and Extract eLiTeWrap (下載並解壓縮 eLiTeWrap)</b>
+* Prepare Payload Programs (準備封裝用程式)</b>
+* Configure Antivirus Exclusions (設定防毒排除規則)</b>
+* Create Wrapped Executable with eLiTeWrap (使用 eLiTeWrap 建立封裝執行檔)</b>
+* Configure Execution Behavior (設定程式執行方式)</b>
+* Execute the Packed File (執行封裝後的檔案)</b>
+* Analyze Process Behavior in Task Manager (使用工作管理員分析程序行為)</b>
+
 
 
 
