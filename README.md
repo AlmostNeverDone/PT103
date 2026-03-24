@@ -72,7 +72,6 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 
 
 [Tasks]
-* Set Up Lab Environment (建立實驗環境)</b>
 * Download and Extract eLiTeWrap (下載並解壓縮 eLiTeWrap)</b>
 * Prepare Payload Programs (準備封裝用程式)</b>
 * Configure Antivirus Exclusions (設定防毒排除規則)</b>
