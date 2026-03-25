@@ -75,8 +75,8 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 * Download and Verify eLiTeWrap (下載並驗證 eLiTeWrap)</b>
 * Configure Antivirus Exclusions (設定防毒排除規則)</b>
 * Prepare Payload Programs (準備封裝用程式)</b>
-* Create a Wrapped file and Configure Execution Behavior (建立封裝檔並配置執行行為)</b>
-* Execute the Packed File and Analyze Process Behavior (執行封裝檔並分析進程行為)</b>
+* Create a Wrapped file and Configure Execution Behaviour (建立封裝檔並配置執行行為)</b>
+* Execute the Packed File and Analyse Process Behaviour (執行封裝檔並分析進程行為)</b>
 
 
 
@@ -87,90 +87,83 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 <h2>Practice 實踐</h2>
 
 <p align="center">
-<b>Task 1: Explore Available Wordlists in Kali Linux<br/> (探索 Kali Linux 內建字典檔)</b><br/>
-<img src="https://i.imgur.com/8XNQ45l.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 1-1: Download File and Verify Integrity Using SHA256<br/> (下載檔案並使用 SHA256 驗證其完整性)</b><br/>
+<img src="https://i.imgur.com/PIIR09U.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 2: Create a Custom Password Wordlist<br/> (建立自訂密碼字典檔)</b><br/>
-<img src="https://i.imgur.com/L9COezx.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 1-2: Verify File Reputation via VirusTotal<br/> (使用 VirusTotal 驗證檔案信譽)</b><br/>
+<img src="https://i.imgur.com/X2BmHGi.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+* This step extends the analysis from integrity validation to threat intelligence correlation, providing additional context for risk assessment. <br/>此步驟將分析從完整性驗證延伸至威脅情報關聯，提供額外的風險評估依據 <br/>
 <br />
 <br />
-<b>Task 3: Create a Custom Username Wordlist<br/> (建立自訂使用者名稱字典檔)</b><br/>
-<img src="https://i.imgur.com/BfvI0ec.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-* Credential enumeration preparation <br/>(憑證列舉準備) <br/>
+<b>Task 2: Configure Antivirus Exclusion<br/> (設定防毒排除)</b><br/>
+<img src="https://i.imgur.com/14KHT7X.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 4: Identify Open Services with Nmap<br/> (使用 Nmap 掃描目標主機服務)</b><br/>
-<img src="https://i.imgur.com/5yOi4HF.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 3: Prepare Payload Programs<br/> (準備封裝程式)</b><br/>
+<img src="https://i.imgur.com/JrwDMX5.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 5-1: Attempt SSH Dictionary Attack with Hydra<br/> (嘗試對 SSH 進行字典攻擊)</b><br/>
-<img src="https://i.imgur.com/7R7g8jE.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 4: Create a Wrapped file and Configure Execution Behaviour<br/> (建立封裝檔並配置執行行為)</b><br/>
+<img src="https://i.imgur.com/6qsorSJ.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 5-2: Perform FTP Dictionary Attack<br/> (使用 FTP 進行字典攻擊)</b><br/>
-<img src="https://i.imgur.com/xsCMWyc.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<b>Task 5: Execute the Packed File and Analyse Process Behaviour<br/> (執行封裝檔並分析進程行為)</b><br/>
+<img src="https://i.imgur.com/lD3r5lY.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<b>Task 5-3: Resolve SSH Key Exchange Compatibility Issue<br/> (解決 SSH 金鑰交換相容性問題)</b><br/>
-<img src="https://i.imgur.com/co8e8HW.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<b>Task 6: Attempt SSH Login with Discovered Credentials<br/> (使用取得的帳密嘗試 SSH 登入)</b><br/>
-<img src="https://i.imgur.com/BBGaJf8.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
+
 
 
 ---------
 
 <h2>Results 專題結論</h2>
 
-This project demonstrated how a dictionary attack can be used to obtain valid credentials from exposed network authentication services.
+This project demonstrates how executable wrapping techniques can be used to simulate basic Trojan behavior by packaging multiple programs into a single file and controlling their execution.
 
-本專題展示了如何透過字典攻擊取得網路認證服務中的有效帳號與密碼。
+本專題展示了如何透過可執行檔封裝技術，將多個程式整合為單一檔案並控制其執行方式，以模擬基本木馬行為。
 
-During the reconnaissance phase, Nmap scanning identified that the target system exposed several network services, including SSH and FTP.
+By embedding legitimate applications and configuring hidden execution, the wrapped file was able to trigger multiple processes, including background execution without direct user visibility.
 
-在偵察階段中，透過 Nmap 掃描確認目標主機開放多個網路服務，包括 SSH 與 FTP。
+透過嵌入合法程式並設定隱藏執行，封裝檔成功觸發多個程序，其中包含使用者不可見的背景執行行為。
 
-An initial dictionary attack against the SSH service failed due to a key exchange algorithm incompatibility between the modern SSH client and the legacy target system. The attack was then redirected to the FTP service, which successfully revealed valid credentials through Hydra. After resolving the SSH algorithm compatibility issue on the client side, the discovered credentials were used to successfully authenticate to the target system.
+Process analysis using Task Manager revealed abnormal behavior, such as a single executable spawning multiple processes and initiating hidden activities, which aligns with common characteristics of Trojan-based attacks.
 
-最初對 SSH 服務發動的字典攻擊因現代 SSH 客戶端與舊版目標系統之間的金鑰交換演算法不相容而失敗。因此攻擊改為針對 FTP 服務進行，並透過 Hydra 成功取得有效帳號與密碼。在調整 SSH 客戶端以支援舊版加密演算法後，成功使用取得的帳密登入目標系統。
+透過工作管理員進行程序分析，觀察到異常行為，例如單一執行檔啟動多個程序並產生隱藏活動，這與典型木馬攻擊特徵一致。
 
-Overall, this experiment illustrates how weak credentials and exposed authentication services can lead to unauthorized system access.
+In addition, file integrity verification and hash-based reputation checks were performed prior to execution, reinforcing secure analysis practices and ensuring reliable results.
 
-總體而言，本實驗展示了弱密碼與暴露的認證服務如何導致未授權系統存取。
+此外，在執行前進行檔案完整性驗證與雜湊信譽查詢，強化了安全分析流程並確保分析結果的可靠性。
+
+Overall, this project highlights how simple techniques can replicate real-world malware behavior and emphasizes the importance of process monitoring and behavioral analysis in detecting such threats.
+
+總結而言，本專題展示了簡單技術如何重現真實世界的惡意程式行為，並強調透過程序監控與行為分析來偵測此類威脅的重要性。
 
 
 ---------
 
 <h2>Security Insight 安全洞察</h2>
 
-This exercise highlights several important security considerations related to authentication services.
+This project highlights the importance of verifying file integrity and assessing potential threats before execution, especially when dealing with externally sourced files.
 
-本次實作揭示了多項與網路認證服務相關的重要安全議題。
+本專題強調在執行外部來源檔案前，進行完整性驗證與潛在威脅評估的重要性。
 
-First, dictionary attacks remain highly effective when users rely on weak or commonly used passwords.
+By validating the SHA256 hash against a trusted source and cross-checking it with threat intelligence platforms such as VirusTotal, we ensured that the file had not been tampered with and did not match known malicious signatures.
 
-首先，當使用者使用弱密碼或常見密碼時，字典攻擊仍然非常有效。
+透過比對 SHA256 雜湊值與可信來源，並進一步利用 VirusTotal 等威脅情報平台進行交叉驗證，我們確認該檔案未被竄改，且未匹配已知惡意樣本。
 
-Second, exposing multiple authentication services such as SSH and FTP increases the attack surface of a system.
+This demonstrates a critical security practice: hash-based validation serves as the first line of defense against supply chain attacks and malicious file distribution.
 
-其次，同時暴露多個認證服務（例如 SSH 與 FTP）會增加系統的攻擊面。
+這展示了一項關鍵資安實務：基於雜湊值的驗證是防禦供應鏈攻擊與惡意檔案散佈的第一道防線。
 
-Third, legacy systems that rely on outdated cryptographic algorithms may introduce compatibility issues and security risks.
+Additionally, the workflow reinforces that static verification alone is not sufficient. Combining hash validation with reputation-based intelligence platforms improves confidence in file safety and reduces the risk of executing compromised binaries.
 
-第三，依賴過時加密演算法的舊版系統不僅可能造成相容性問題，也可能帶來安全風險。
+此外，本流程也強調僅依賴靜態驗證是不足的。結合雜湊驗證與信譽型威脅情報平台，能有效提升檔案安全性的判斷準確度，降低執行惡意程式的風險。
 
-To mitigate these risks, organizations should enforce strong password policies, implement account lockout mechanisms, and restrict unnecessary authentication services.
+From a defensive perspective, this approach aligns with secure software handling practices, where every external artifact must be validated before being trusted within an environment.
 
-為降低這些風險，組織應實施強密碼政策、登入失敗鎖定機制，並限制不必要的認證服務。
-
-Additionally, legacy protocols and outdated cryptographic algorithms should be phased out to improve overall system security.
-
-此外，應逐步淘汰舊版協定與過時的加密演算法，以提升整體系統安全性。
+從防禦角度來看，此方法符合安全軟體處理原則，即所有外部取得的檔案在被信任與使用前，都應進行驗證。
 
 ---------
 
@@ -178,6 +171,4 @@ Additionally, legacy protocols and outdated cryptographic algorithms should be p
 
 [UniSQ] [CSC6101 - Penetration Testing](https://handbook-guide.unisq.edu.au/course/2026/CSC6101)<br/>
 [TryHackMe] [Cyber Kill Chain](https://tryhackme.com/room/cyberkillchainzmt)<br/>
-[TryHackMe] [Nmap: The Basics](https://tryhackme.com/room/nmap)<br/>
-[TryHackMe] [Hydra](https://tryhackme.com/room/hydra)<br/>
 <br/>
