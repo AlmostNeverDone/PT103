@@ -72,7 +72,7 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 
 
 [Tasks]
-* Download and Extract eLiTeWrap (下載並解壓縮 eLiTeWrap)</b>
+* Download and Verify eLiTeWrap (下載並驗證 eLiTeWrap)</b>
 * Prepare Payload Programs (準備封裝用程式)</b>
 * Configure Antivirus Exclusions (設定防毒排除規則)</b>
 * Create Wrapped Executable with eLiTeWrap (使用 eLiTeWrap 建立封裝執行檔)</b>
