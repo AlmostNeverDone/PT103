@@ -75,8 +75,8 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 * Download and Verify eLiTeWrap (下載並驗證 eLiTeWrap)</b>
 * Configure Antivirus Exclusions (設定防毒排除規則)</b>
 * Prepare Payload Programs (準備封裝用程式)</b>
-* Create Wrapped file and Configure Execution Behavior with eLiTeWrap (使用 eLiTeWrap 建立封裝檔並配置執行行為)</b>
-* Execute the Packed File and Analyze Process Behavior in Task Manager (執行封裝後的檔案並在任務管理器中分析進程)</b>
+* Create a Wrapped file and Configure Execution Behavior (建立封裝檔並配置執行行為)</b>
+* Execute the Packed File and Analyze Process Behavior (執行封裝檔並分析進程行為)</b>
 
 
 
