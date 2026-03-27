@@ -94,7 +94,7 @@ The objective is to understand how basic Trojan-like behavior can be constructed
 <b>Task 1-2: Verify File Reputation via VirusTotal<br/> (使用 VirusTotal 驗證檔案信譽)</b><br/>
 <img src="https://i.imgur.com/X2BmHGi.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-* This step extends the analysis from integrity validation to threat intelligence correlation, providing additional context for risk assessment. <br/>此步驟將分析從完整性驗證延伸至威脅情報關聯，提供額外的風險評估依據 <br/>
+* This step extends the analysis from integrity validation to threat intelligence correlation, <br/>providing additional context for risk assessment. <br/>此步驟將分析從完整性驗證延伸至威脅情報關聯，提供額外的風險評估依據 <br/>
 <br />
 <br />
 <b>Task 2: Configure Antivirus Exclusion<br/> (設定防毒排除)</b><br/>
